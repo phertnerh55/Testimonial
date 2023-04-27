@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Barlow Semi Condensed" sans-serif;
+}
+.flex-container {
+  display: flex;
+  gap: 20px;
+}
+.img {
+  border-radius: 50%;
+}
+.testimonials {
+  border-radius: 10px;
+  padding: 2em;
+}
+h3 {
+  padding: 1em;
+}
+.Clifford {
+  background-color: hsl(263, 55%, 52%);
+  color: white;
+  grid-column: span 2;
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+  background-size: 150px;
+}
+
+.Jonathan {
+  background-color: hsl(217, 19%, 35%);
+  color: white;
+}
+.Harmon {
+  background-color: hsl(0, 0%, 100%);
+}
+.Patrick {
+  background-color: hsl(219, 29%, 14%);
+  color: white;
+  grid-column: span 2;
+}
+.Kira {
+  background-color: hsl(0, 0%, 100%);
+  grid-row: span 2;
+}
+
+.testimonial-container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  padding: 5em;
+  gap: 1em;
+}
+
+/* media queries  */
+@media only screen and (max-width: 1200px) {
+  .testimonial-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 700px) {
+  .testimonial-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, auto);
+    padding: 2em;
+    gap: 0.5em;
+  }
+  .Clifford {
+    grid-column: span 1;
+  }
+  .kira {
+    grid-row: span 1;
+  }
+  .Patrick {
+    grid-column: span 1;
+  }
+  /* .testimonials article{
+    height:fit-content;
+  } */
+}
+.hearts{
+  color: red;
+}
